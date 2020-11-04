@@ -44,7 +44,7 @@ nodes:
 
 `kind create cluster --config=kind-config-HA.yaml`
 
-# Install and Configure Vault Controller
+# Configure environment to the Vault Controller
 
 ## Get project from Gitlab - Laredoute project, using git tool
 
@@ -116,9 +116,9 @@ Change the image name and tag, and add a new policy for pull image:
 
 ## Kubernetes Environment
 
-## Vault
+## Install Vault
 
-We'll install the Vault first of the Vault Controller
+Let's install Vault first, prerequisite for Vault Controller
 
 **Create Vault namespace**
 
