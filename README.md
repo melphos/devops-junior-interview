@@ -175,7 +175,7 @@ vault-agent-injector-svc   ClusterIP   10.96.37.56    <none>        443/TCP     
 vault-internal             ClusterIP   None           <none>        8200/TCP,8201/TCP   10m
 ```
 
-**Forward the Vault port to your machine**
+### Forward the Vault port to your machine
 
 This will be forward the port 8200 of Vault to your machine on port 8210. This is needed to you inicialize the Vault and get the rootToken:
 
@@ -188,13 +188,13 @@ When you access for the first time, you'll see a init process wizard, on bellow 
 Key shares: 1
 Key threshold: 1
 
-[img/vault-init-master-keys.png]
+![](img/vault-init-master-keys.png)
 
 **Anotate the root token**
 
 Anotate the root token generated on the last step of the wizard. Ex.;
 
-[img/vault-init-root-and-unseal-keys.png]
+![](img/vault-init-root-and-unseal-keys.png)
 
 rootToken: s.ysdGvqWNNnOtv9ZYwsEz1QPT
 
