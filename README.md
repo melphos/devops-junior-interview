@@ -1,10 +1,18 @@
-# devops-junior-interview
+# Devops Junior Interview
 
-# Install/configure kind
+# Install and configure Docker
+
+Following the link:
+
+`https://docs.docker.com/get-docker/`
+
+# Install and configure kind
 
 Following the link: 
 
 `https://kind.sigs.k8s.io/docs/user/quick-start/`
+
+Use the config file bellow to create the cluster with HA - High Availability
 
 # kind-config-HA.yaml
 
