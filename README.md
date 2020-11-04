@@ -1,7 +1,8 @@
 # Devops Junior Interview
 
 > Use more than one terminal to do the job
-> You'll need 4 terminal:
+> 
+> You'll need 3 terminals:
 >  - Forward Port from service Vault to your machine
 >  - See the Vault Controller Manager logs
 >  - Apply changes on kubernetes (kubectl)
