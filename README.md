@@ -190,9 +190,9 @@ Key threshold: 1
 
 ![](img/vault-init-master-keys.png)
 
-**Anotate the root token**
+**Anotate the root token and unseal key**
 
-Anotate the root token generated on the last step of the wizard. Ex.;
+Anotate the root token and unseal key generated on the last step of the wizard. Ex.;
 
 ![](img/vault-init-root-and-unseal-keys.png)
 
