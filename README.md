@@ -251,7 +251,7 @@ kubectl --namespace vault-controller-system logs vault-controller-controller-man
 
 On another terminal create a policy to test the access to the Vault Controller and Vault
 
-`k apply -f config/policies/default/policy-admin-integration.yaml`
+`kubectl apply -f config/policies/default/policy-admin-integration.yaml`
 
 > Remember the Vault Controller path (from repository)
 
