@@ -14,11 +14,82 @@
 
 # Install and configure Docker
 
-Following the link:
+<br>
+<details><summary>Expectation</summary>
+<p>
+
+#### Time expectationed for that step:
+
+```bash
+time: 30 min
+```
+
+#### Result: 
+- Docker UP and Running (Ex.: docker ps)
+
+#### Expected understanding/skills of the candidate:
+
+### Docker:
+
+- Undertanding Docker daemon
+- Undertanding Docker principals:
+- - Permissions
+- - Hardware
+- - cgroups 
+
+</p>
+</details>
+<br>
+
+### Following the link:
 
 `https://docs.docker.com/get-docker/`
 
+<br>
+
 # Install and configure kind
+
+<br>
+<details><summary>Expectation</summary>
+<p>
+
+#### Time expectationed for that step:
+
+```bash
+time: 1 hour
+```
+
+#### Result: 
+- Kubernetes HA - High Availability UP and Running
+
+#### Expected understanding/skills of the candidate:
+
+### Kubernetes:
+
+- control plane
+  - kube-apiserver
+  - kube-controller-manager
+  - kube-schedule
+- Workers (nodes)
+  - kubelet
+  - kube-proxy
+- etcd
+
+### Docker:
+
+- Volume mount
+- Network mode
+  - Network namespace
+  - IPAM config:
+    - gateway
+    - address
+    - IP range
+- Port Bindings
+
+</p>
+</details>
+<br>
+
 
 Following the link: 
 
@@ -60,9 +131,66 @@ On the Vault Controller project root path, you can compile the project:
 
 ### Build Go Binary (manager)
 
+<br>
+<details><summary>Expectation</summary>
+<p>
+
+#### Time expectationed for that step:
+
+```bash
+time: 30 min
+```
+
+#### Result: 
+- Create the manager binary
+
+#### Expected understanding/skills of the candidate:
+
+### The GO structure:
+
+- - Requires packages (go.mod): 
+- - - Module
+- - - Require
+- - - Replace*
+- - main.go
+- - packages:
+- - - api
+- - - controllers
+- - build
+
+</p>
+</details>
+<br>
+
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO115MODULE=on go build -a -o manager main.go
 
 ### Build a image to load on Kind
+
+<br>
+<details><summary>Expectation</summary>
+<p>
+
+#### Time expectationed for that step:
+
+```bash
+time: 10 min
+```
+
+#### Result: 
+- Create the manager docker image
+- Import vault-controller image to Kind
+- Validate that the image was imported into Kind
+
+#### Expected understanding/skills of the candidate:
+
+- Build Docker image
+- Kubernetes basic interation with API (kubectl)
+- Undertanding about nodes and your relation with docker containers
+- Undertanding about deployment object inside Kubernetes
+
+</p>
+</details>
+<br>
 
 #### Buld Image
 
@@ -115,6 +243,41 @@ Change the image name and tag, and add a new policy for pull image:
 ```
 
 ## Kubernetes Environment
+
+<br>
+<details><summary>Expectation</summary>
+<p>
+
+#### Time expectationed for that step:
+
+```bash
+time: 30 min
+```
+
+#### Result: 
+- Install Vault over Helm Chart
+- Create the Kubernetes objects:
+  -  namespace, 
+  -  pvc, 
+  -  pv, 
+  -  POD, 
+  -  deploy and 
+  -  service
+- Vault:
+  - Inicialization
+  - Key/Value
+  - Role
+  - Policy
+
+#### Expected understanding/skills of the candidate:
+
+- Kubernetes Deployment process (CKAD)
+- Kubernetes basic interation with API (kubectl)
+- Undertanding about Vault features and integration with Kubenretes
+
+</p>
+</details>
+<br>
 
 ## Install Vault
 
@@ -196,9 +359,39 @@ Anotate the root token and unseal key generated on the last step of the wizard. 
 
 ![](img/vault-init-root-and-unseal-keys.png)
 
-rootToken: s.ysdGvqWNNnOtv9ZYwsEz1QPT
+
+**rootToken**: _s.ysdGvqWNNnOtv9ZYwsEz1QPT_
 
 ## Vault controller
+
+<br>
+<details><summary>Expectation</summary>
+<p>
+
+#### Time expectationed for that step:
+
+```bash
+time: 1 hour and 30 min
+```
+
+#### Result: 
+- Install the Vault Controller
+  - Pod Security Policy
+  - Service Account
+  - Role and RoleBinding
+- Configure the Vault Controller to integrate with Vault
+- Configure the default Custom Resource Definition (CRD) to the Vault Controller
+
+#### Expected understanding/skills of the candidate:
+
+- Kubernetes Deployment process (CKAD)
+- Kubernetes interation with API (kubectl)
+- Undertanding about Kubernetes Controllers
+- Understanding about Vault
+
+</p>
+</details>
+<br>
 
 Change the `config/vault-controller-config.yaml` to set root Token and Vault Address:
 
